@@ -8,6 +8,7 @@ def is_palindrome(s):
     """
     returns true if the given string is a palindrome
     """
+    s = s.lower()
     L = []
     for i in range(len(s)):
         if s[i] == s[-1-i]:
