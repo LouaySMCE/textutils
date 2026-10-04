@@ -1,23 +1,23 @@
 """
 Check if a string is a palindrome.
-A palindrome is a word that is the same forward and backward.
-"radar" -> True , "level" -> False
 """
 
+
 def is_palindrome(s):
-    """
-    returns true if the given string is a palindrome
-    """
-    L = []
-    for i in range(len(s)):
-        if s[i] == s[-1-i]:
-            L.append(True)
-        else:
-            L.append(False)
-    if False in L:
-        return False
-    else:
-        return True
+    """Return True if the string is a palindrome, ignoring case."""
+
+    left = 0
+    right = len(s) - 1
+
+    while left < right:
+        if s[left].lower() != s[right].lower():
+            return False
+
+        left += 1
+        right -= 1
+
+    return True
+
 
 print(is_palindrome("radar"))
 print(is_palindrome("hello"))
