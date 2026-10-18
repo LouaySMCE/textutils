@@ -19,5 +19,3 @@ def is_palindrome(s):
     return True
 
 
-print(is_palindrome("radar"))
-print(is_palindrome("hello"))
