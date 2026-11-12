@@ -1,16 +1,24 @@
-def word_count(text):
-    """
-    This function takes a text (String) as input and returns the number of words in it
-    """
-    if text == "" or text ==" ": return 0
-    count = 1
-    for elm in text:
-        if elm == " ":
-            count+=1
-    if text[-1]==" ":
-        count = count -1
-    return count
+"""Word count module."""
 
-# Usage exemple
-print(word_count("Inazuma Eleven"))
-print(word_count("Hello there "))
+
+def word_count(text):
+    """Count the number of words in a string.
+
+    Parameters
+    ----------
+    text : str
+        Input text whose words are counted.
+
+    Returns
+    -------
+    int
+        Number of words in the input text.
+
+    Raises
+    ------
+    TypeError
+        If text is not a string.
+    """
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+    return len(text.split())

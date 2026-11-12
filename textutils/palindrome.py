@@ -1,10 +1,26 @@
-"""
-Check if a string is a palindrome.
-"""
+"""Palindrome detection module."""
 
 
 def is_palindrome(s):
-    """Return True if the string is a palindrome, ignoring case."""
+    """Check if the given string is a palindrome, ignoring case.
+
+    Parameters
+    ----------
+    s : str
+        Input string to check.
+
+    Returns
+    -------
+    bool
+        True if the string is a palindrome, False otherwise.
+
+    Raises
+    ------
+    TypeError
+        If s is not a string.
+    """
+    if not isinstance(s, str):
+        raise TypeError("s must be a string")
 
     left = 0
     right = len(s) - 1
@@ -17,5 +33,3 @@ def is_palindrome(s):
         right -= 1
 
     return True
-
-
