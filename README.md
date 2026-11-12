@@ -15,7 +15,7 @@ A lightweight Python library for common text-processing operations.
 Install via pip:
 
 ```bash
-pip install textutils
+pip install textutils-louaysmce
 ```
 
 For development:
